@@ -77,7 +77,7 @@ class Game:
             move.label for row in self._current_moves for move in row
         )
         return no_winner and all(played_moves)
-
+    # to change the current player turn
     def toggle_player(self):
         """Return a toggled player."""
         self.current_player = next(self._players)
@@ -89,3 +89,5 @@ class Game:
                 row_content[col] = Move(row, col)
         self._has_winner = False
         self.winner_combo = []
+
+    
